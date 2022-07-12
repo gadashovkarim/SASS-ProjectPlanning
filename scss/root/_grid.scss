@@ -1,0 +1,19 @@
+.container{
+    width: 100%;
+}
+@for $i from 1 through 12{
+    .col-#{$i} {
+        width: calc((100% / 12)*#{$i});
+    }
+}
+
+@media (max-width:$breakpoint-sm){
+    .container{
+        width: 100%;
+    }
+    @for $i from 1 through 12{
+        .col-xs-#{$i} {
+            width:calc((100% / 12)*#{$i});
+        }
+    }
+}
